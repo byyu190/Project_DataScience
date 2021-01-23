@@ -1,6 +1,6 @@
 ---
 title: "projek"
-author: "Bayu Tirta Aji"
+author: "Bayu Tirta Aji & Hanif Muhammad Rizqi"
 date: "1/11/2021"
 output: html_document
 runtime: shiny
