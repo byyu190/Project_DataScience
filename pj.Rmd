@@ -139,9 +139,6 @@ corpus_clean_test <- corpus_clean[701:1000]
 dtm_train <- dtm[1:701,]
 dtm_test <- dtm[701:1000,]
 
-dim(dtm_train)
-dim(dtm_test)
-
 
 # Feature Selection, ambil kata yang muncul minimal 5 kali
 fiveFreq <- findFreqTerms(dtm_train, 5)
@@ -173,6 +170,7 @@ convert_count <- function(x) {
 # Apply the convert_count function to get final training and testing DTMs
 trainNB <- apply(dtm_train_nb, 2, convert_count)
 testNB <- apply(dtm_test_nb, 2, convert_count)
+
 
 # Membuat model naive bayes dari data training
 classifier <- naiveBayes(trainNB, restaurant_review_train$class, laplace = 1)
