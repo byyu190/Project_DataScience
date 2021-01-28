@@ -174,8 +174,6 @@ convert_count <- function(x) {
 trainNB <- apply(dtm_train_nb, 2, convert_count)
 testNB <- apply(dtm_test_nb, 2, convert_count)
 
-view(testNB)
-
 # Membuat model naive bayes dari data training
 classifier <- naiveBayes(trainNB, restaurant_review_train$class, laplace = 1)
 
