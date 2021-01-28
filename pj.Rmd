@@ -71,6 +71,14 @@ bagan <- a
 ```
 ##NAIVE BAYES
 ```{r naivebayes}
+#library untuk penggunaan corpus dalam cleaning data
+library(tm)
+library(RTextTools)
+#library yang terdapat sebuah algoritma naivebayes
+library(e1071)
+library(dplyr)
+library(caret)
+
 # Load dataset
 my_Dataset <- read.csv("Restaurant_Reviews.csv", stringsAsFactors = FALSE)
 
